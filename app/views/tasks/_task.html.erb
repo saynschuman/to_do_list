@@ -1,0 +1,4 @@
+<tr>
+  <td><span class="<%=task.state%>"><%= task.task_name %></span></td>
+  <td class="text-r"><%= link_to 'Изменить', edit_task_path(task) %> <%= link_to 'Удалить', task_path(task), method: :delete%></td>
+</tr>

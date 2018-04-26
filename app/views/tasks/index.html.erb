@@ -1,0 +1,18 @@
+<table class="table">
+  <tbody>
+    <% @notcomplited.each do |t| %>
+    <tr>
+      <td><span class="<%=t.state%>"><%= t.task_name %></span></td>
+      <td class="text-r"><%= link_to 'Изменить', edit_task_path(t) %> <%= link_to 'Удалить', task_path(t), method: :delete%></td>
+    </tr>
+    <% end %>
+    <% @completed.each do |t| %>
+    <tr>
+      <td><span class="<%=t.state%>"><%= t.task_name %></span></td>
+      <td class="text-r"><%= link_to 'Изменить', edit_task_path(t) %> <%= link_to 'Удалить', task_path(t), method: :delete%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'Добавить задачу', new_task_path %>

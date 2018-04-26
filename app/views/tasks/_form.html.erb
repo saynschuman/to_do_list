@@ -1,0 +1,12 @@
+<%= form_for @task do |f|%>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+        <%= f.check_box :state  %>
+      </div>
+    </div>
+    <%= f.text_field :task_name, class: 'form-control', 'aria-label': 'Text input with checkbox'%>
+    <%= f.submit 'Submit' %>
+  </div>
+<% end %>
+<div><%= link_to '<- Назад', :back %></div>
